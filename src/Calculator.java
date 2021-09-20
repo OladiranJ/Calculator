@@ -124,7 +124,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 1;
-                //numberTextArea.setText("");
+                numberTextArea.setText("");
             }
         });
 
@@ -133,7 +133,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 2;
-                //numberTextArea.setText("");
+                numberTextArea.setText("");
             }
         });
 
@@ -142,7 +142,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 3;
-                //numberTextArea.setText("");
+                numberTextArea.setText("");
             }
         });
 
@@ -151,7 +151,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 4;
-                //numberTextArea.setText("");
+                numberTextArea.setText("");
             }
         });
 

@@ -26,35 +26,11 @@ public class Calculator {
     private JButton resetButton;
     private JButton equalsButton;
 
+    double num;
+    double answer;
+    int operator;
+
     public Calculator() {
-
-        double num;
-        double answer;
-        int operator;
-
-        public void mathOperations() {
-            switch (operator) {
-                case 1:
-                    answer = num + Double.parseDouble(numberTextArea.getText());
-                    numberTextArea.setText(Double.toString(answer));
-                    break;
-
-                case 2:
-                    answer = num - Double.parseDouble(numberTextArea.getText());
-                    numberTextArea.setText(Double.toString(answer));
-                    break;
-
-                case 3:
-                    answer = num * Double.parseDouble(numberTextArea.getText());
-                    numberTextArea.setText(Double.toString(answer));
-                    break;
-
-                case 4:
-                    answer = num / Double.parseDouble(numberTextArea.getText());
-                    numberTextArea.setText(Double.toString(answer));
-                    break;
-            }
-        }
 
         zeroButton.addActionListener(new ActionListener() {
             @Override
@@ -148,7 +124,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 1;
-                numberTextArea.setText("");
+                //numberTextArea.setText("");
             }
         });
 
@@ -157,7 +133,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 2;
-                numberTextArea.setText("");
+                //numberTextArea.setText("");
             }
         });
 
@@ -166,7 +142,7 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 3;
-                numberTextArea.setText("");
+                //numberTextArea.setText("");
             }
         });
 
@@ -175,10 +151,38 @@ public class Calculator {
             public void actionPerformed(ActionEvent e) {
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 4;
-                numberTextArea.setText("");
+                //numberTextArea.setText("");
             }
         });
 
+
+        equalsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mathOperations();
+            }
+        });
+    }
+
+    private void mathOperations() {
+        switch (operator) {
+            case 1 -> {
+                answer = num + Double.parseDouble(numberTextArea.getText());
+                numberTextArea.setText(Double.toString(answer));
+            }
+            case 2 -> {
+                answer = num - Double.parseDouble(numberTextArea.getText());
+                numberTextArea.setText(Double.toString(answer));
+            }
+            case 3 -> {
+                answer = num * Double.parseDouble(numberTextArea.getText());
+                numberTextArea.setText(Double.toString(answer));
+            }
+            case 4 -> {
+                answer = num / Double.parseDouble(numberTextArea.getText());
+                numberTextArea.setText(Double.toString(answer));
+            }
+        }
     }
 
     public static void main(String[] args) {

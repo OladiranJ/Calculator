@@ -11,6 +11,18 @@ public class Calculator {
     private JButton subtractButton;
     private JButton multiplyButton;
     private JButton divideButton;
+    private JButton sevenButton;
+    private JButton eightButton;
+    private JButton nineButton;
+    private JButton fourButton;
+    private JButton fiveButton;
+    private JButton sixButton;
+    private JButton oneButton;
+    private JButton twoButton;
+    private JButton threeButton;
+    private JButton zeroButton;
+    private JButton resetButton;
+    private JButton equalsButton;
 
 
 }

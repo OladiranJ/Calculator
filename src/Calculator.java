@@ -26,89 +26,191 @@ public class Calculator {
     private JButton resetButton;
     private JButton equalsButton;
 
-    double num;
-    double answer;
-    int operator;
+    double num; // = 135
+    double reset;
+    double answer; // = 135
+    Boolean ableToAddMoreNumbers = true; // = false
+    int operator = 0; // = 1
 
     public Calculator() {
 
         zeroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String zero = zeroButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + zero);
+                ableToAddMoreNumbers = true;
             }
         });
 
         oneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String one = oneButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + one);
+                ableToAddMoreNumbers = true;
             }
         });
 
         twoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String two = twoButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + two);
+                ableToAddMoreNumbers = true;
             }
         });
 
         threeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String three = threeButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + three);
+                ableToAddMoreNumbers = true;
             }
         });
 
         fourButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String four = fourButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + four);
+                ableToAddMoreNumbers = true;
             }
         });
 
         fiveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String five = fiveButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + five);
+                ableToAddMoreNumbers = true;
             }
         });
 
         sixButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String six = sixButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + six);
+                ableToAddMoreNumbers = true;
             }
         });
 
         sevenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String seven = sevenButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + seven);
+                ableToAddMoreNumbers = true;
             }
         });
 
         eightButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String eight = eightButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + eight);
+                ableToAddMoreNumbers = true;
             }
         });
 
         nineButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0 && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    ableToAddMoreNumbers = true;
+                } else if (operator == 0 && num == answer && !ableToAddMoreNumbers) {
+                    numberTextArea.setText("");
+                    num = reset;
+                    ableToAddMoreNumbers = true;
+                }
+
                 String nine = nineButton.getText();
                 numberTextArea.setText(numberTextArea.getText() + nine);
+                ableToAddMoreNumbers = true;
             }
         });
 
@@ -116,42 +218,66 @@ public class Calculator {
             @Override
             public void actionPerformed(ActionEvent e) {
                 numberTextArea.setText("");
+                operator = 0;
+                num = reset;
+                answer = reset;
+                ableToAddMoreNumbers = true;
             }
         });
 
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0) {
+                    mathOperations();
+                    operator = 0;
+                }
+
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 1;
-                numberTextArea.setText("");
+                ableToAddMoreNumbers = false;
             }
         });
 
         subtractButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0) {
+                    mathOperations();
+                    operator = 0;
+                }
+
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 2;
-                numberTextArea.setText("");
+                ableToAddMoreNumbers = false;
             }
         });
 
         multiplyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0) {
+                    mathOperations();
+                    operator = 0;
+                }
+
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 3;
-                numberTextArea.setText("");
+                ableToAddMoreNumbers = false;
             }
         });
 
         divideButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (operator > 0) {
+                    mathOperations();
+                    operator = 0;
+                }
+
                 num = Double.parseDouble(numberTextArea.getText());
                 operator = 4;
-                numberTextArea.setText("");
+                ableToAddMoreNumbers = false;
             }
         });
 
@@ -160,6 +286,9 @@ public class Calculator {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mathOperations();
+                operator = 0;
+                num = answer;
+                ableToAddMoreNumbers = false;
             }
         });
     }
